@@ -1,8 +1,19 @@
+/*-------------------*/
+/* >>>> Theme.scss   */
+/*-------------------*/
+
+$space-mono: "Space Mono", monospace;
+$sans-serif: "Inter", sans-serif;
+
 $color-primary: #3a00ff !default;
-$color-primary-alt: #6f6ffd !default;
 $color-secondary: #d42257 !default;
 $color-background: #d2fbf7 !default;
 
+$colors: (
+    "primary": $color-primary,
+    "secondary": $color-secondary,
+    "background":  $color-background
+);
 
 @function svgColor($color) {
   @return "%23" + str-slice("#{$color}", 2, -1);

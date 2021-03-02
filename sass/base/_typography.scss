@@ -1,21 +1,28 @@
-h1,
-h2,
-h3,
-h4 {
-  font-weight: var(--font-weight-strong);
-  line-height: 1;
-  margin-bottom: 0.65em;
+/*-------------------------*/
+/* >>>> Typographie.scss   */
+/*-------------------------*/
+
+
+
+body {
+  font-family: $sans-serif;
 }
 
+
 h1 {
-  font-size: var(--font-size-h1);
-  font-size: clamp(2rem, 7vw, var(--font-size-h1));
+  font-family: $space-mono;
+  font-style: italic;
+  font-size: 4.5rem;
+  letter-spacing: .07em;
 }
 
 h2 {
-  font-size: var(--font-size-h2);
-  font-size: clamp(2rem, 4vw, var(--font-size-h2));
-  text-align: center;
+  font-family: $space-mono;
+  font-size: 2rem;
+  line-height: 160%;
+  color: #A132E5;
+  // not yet supported unfortunetly
+  // font-feature-settings: 'ss02' on;
 }
 
 #main h2 {
