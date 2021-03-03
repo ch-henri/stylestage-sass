@@ -5,14 +5,16 @@
 $space-mono: "Space Mono", monospace;
 $sans-serif: "Inter", sans-serif;
 
-$color-primary: #3a00ff !default;
-$color-secondary: #d42257 !default;
-$color-background: #d2fbf7 !default;
+$color-primary: #3a00ff;
+$color-secondary: #d42257;
+$color-background: #d2fbf7;
+$text-link-color: #DD2471;
 
 $colors: (
     "primary": $color-primary,
     "secondary": $color-secondary,
-    "background":  $color-background
+    "background":  $color-background,
+    "text-link-color": $text-link-color,
 );
 
 @function svgColor($color) {
@@ -30,7 +32,6 @@ $font-size-h4: 1.35rem !default;
 $font-size-text: 1.15rem !default;
 
 $font-sizes: (
-  h1: $font-size-h1,
   h2: $font-size-h2,
   h3: $font-size-h3,
   h4: $font-size-h4,

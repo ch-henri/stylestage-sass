@@ -12,14 +12,15 @@ body {
 h1 {
   font-family: $space-mono;
   font-style: italic;
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 6vw, 4.5rem);
   letter-spacing: .07em;
+  margin-bottom: clamp(1rem, 3.5vw, 3rem);
 }
 
 h2 {
   font-family: $space-mono;
-  font-size: 2rem;
-  line-height: 160%;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.4;
   color: #A132E5;
   // not yet supported unfortunetly
   // font-feature-settings: 'ss02' on;
