@@ -4,8 +4,8 @@
 
 header {
   position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr clamp(80px, 20vw, 300px);
 }
 
 header:before {
@@ -22,28 +22,42 @@ header:before {
 }
 
 header:after {
+  grid-column: 2;
+  grid-row: 1;
   content: "";
   display: block;
-  flex:0 0 clamp(80px, 20vw, 300px);
   background-size: contain;
   background-image: url("data:image/svg+xml,%3Csvg width='293' height='584' viewBox='0 0 293 584' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 292C2 452.715 129.8 583 293 583V1C129.8 1 2 131.285 2 292Z' fill='white'/%3E%3Cpath d='M293 494.414C180.741 494.414 89.7365 403.566 89.7365 291.5C89.7365 179.434 180.741 88.5857 293 88.5857' fill='url(%23paint0_linear)'/%3E%3Cpath d='M66.3767 291.5C66.3767 166.559 167.844 65.266 293 65.266' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 517.734C167.844 517.734 66.3767 416.441 66.3767 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cpath d='M45.4515 291.5C45.4515 155.019 156.285 44.3768 293 44.3768' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 538.623C156.285 538.623 45.4515 427.98 45.4515 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cpath d='M24.6143 291.5C24.6143 143.524 144.769 23.5752 293 23.5752' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 559.425C144.769 559.425 24.6143 439.476 24.6143 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cpath d='M2 291.5C2 131.065 132.289 1 293 1' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 582C132.289 582 2 451.935 2 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='116.402' y1='83.8627' x2='331.124' y2='287.48' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
+  background-position: right top;
   transform: translateY(-15%);
 }
 
 header .container {
-  flex: 1 1 auto;
+  grid-column: 1 / 3;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
-  padding-top: clamp(2rem, 6vw, 6rem);
-  padding-bottom: clamp(2rem, 6vw, 6rem);
-  padding-right: 0;
-  padding-left: clamp(2rem, 6vw, 6rem);
+  padding: clamp(2rem, 6vw, 6rem) 1rem clamp(10rem, 6vw, 6rem) clamp(2rem, 6vw, 6rem);
 }
 
+@media (min-width: 576px) {
+  header .container {
+  grid-column: 1;
+  }
+}
+ 
 header h1,
 header h2 {
 max-width: 600px;
+}
+
+header h1 {
+  margin-bottom: clamp(1.5rem, 3.5vw, 3rem);
+}
+
+header h2 {
+  margin-bottom: clamp(1rem, 3vw, 2.5rem);
 }
 
 header p {
@@ -57,4 +71,5 @@ header p {
 
 header .link-github {
   align-self: flex-start;
+  margin-bottom: clamp(2rem, 3vw, 3.5rem);
 }

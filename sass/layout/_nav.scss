@@ -1,12 +1,11 @@
 nav {
-  padding: clamp(1rem, 3vw,  3.5rem) clamp(.5rem, 1.5vw,  2rem);
+  padding: clamp(1rem, 3vw,  3.5rem) clamp(0px, 1vw,  2rem); // 0px should be unitless but somehow without unit it is not valid
   background: #F6F6F6;
 }
 
 nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
