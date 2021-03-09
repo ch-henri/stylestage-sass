@@ -12,12 +12,9 @@
 @import "layout/layout";
 @import "layout/header";
 @import "layout/nav";
+@import "layout/sections";
 @import "layout/footer";
 
 // Components
 @import "components/buttons";
 @import "components/cards";
-
-
-// will remove keep for integrate svg color sass fuction
-@import "styles";
