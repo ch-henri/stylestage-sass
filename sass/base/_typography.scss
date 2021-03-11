@@ -43,7 +43,7 @@ h4 {
 
 p,
 li {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
 }
 
@@ -83,14 +83,17 @@ blockquote {
 }
 
 blockquote p {
+  font-size: 1.125rem;
   font-weight: 520;
 }
 
 
 blockquote strong {
   display: block;
-  width: 1em; // to make line-break at   white-space
+  width: 1em; // to make a line-break in white-space
+  margin-bottom: .5em;
   font-family: $space-mono;
+  font-weight: 700;
   font-style: italic;
   font-size: 1.25rem;
   line-height: 1.2;
