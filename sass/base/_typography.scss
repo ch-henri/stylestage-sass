@@ -28,7 +28,7 @@ h2 {
 #main h2 {
   font-family: $space-mono;
   font-style: italic;
-  font-size: clamp(1.5rem, calc(2vw + .75rem), 2.25rem); //will grow from 600px to 1200px window (assuming browser is set to default for font-size and zoom)   
+  font-size: clamp(1.5rem, calc(2vw + .75rem), 2.25rem); //will grow from 600px to 1200px window (assuming browser is set to default for font-size and zoom)
   line-height: 1.2;
   color: black;
 }
@@ -85,6 +85,8 @@ blockquote {
 blockquote p {
   font-size: 1.125rem;
   font-weight: 520;
+  line-height: 1.7;
+  color: #493754;
 }
 
 
@@ -97,7 +99,7 @@ blockquote strong {
   font-style: italic;
   font-size: 1.25rem;
   line-height: 1.2;
-  color: $color-primary;
+  color: $color-secondary;
 }
 
 #guidelines,

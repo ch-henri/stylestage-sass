@@ -3,8 +3,8 @@
 /* >>>> Theme.scss   */
 /*-------------------*/
 :root {
-  --color-primary: #3a00ff;
-  --color-secondary: #d42257;
+  --color-primary: #DD2471;
+  --color-secondary: #A132E5;
   --color-background: #d2fbf7;
   --color-text-link-color: #DD2471;
   --font-size-h2: 3rem;
@@ -145,6 +145,8 @@ blockquote {
 blockquote p {
   font-size: 1.125rem;
   font-weight: 520;
+  line-height: 1.7;
+  color: #493754;
 }
 
 blockquote strong {
@@ -156,7 +158,7 @@ blockquote strong {
   font-style: italic;
   font-size: 1.25rem;
   line-height: 1.2;
-  color: #3a00ff;
+  color: #A132E5;
 }
 
 #guidelines p:nth-of-type(1),
@@ -321,13 +323,19 @@ nav a {
 /*-------------------*/
 /* >>>>> Main.scss   */
 /*-------------------*/
-#about section:first-child {
+#about section {
   position: relative;
   display: grid;
   grid-template-columns: minmax(10px, 1fr) repeat(12, minmax(0, 80px));
   column-gap: 1rem;
+  padding: 3rem 0;
 }
-#about section:first-child:before {
+@media (min-width: 992px) {
+  #about section {
+    padding: 5rem 0;
+  }
+}
+#about section:before {
   content: "#01";
   position: absolute;
   display: block;
@@ -340,18 +348,18 @@ nav a {
   color: #F5F5F5;
 }
 @media (min-width: 576px) {
-  #about section:first-child:before {
+  #about section:before {
     grid-column: 2/4;
     grid-row: 2/3;
     justify-self: start;
   }
 }
 @media (min-width: 992px) {
-  #about section:first-child:before {
+  #about section:before {
     font-size: 9rem;
   }
 }
-#about section:first-child:after {
+#about section:after {
   content: "";
   position: absolute;
   display: block;
@@ -367,7 +375,7 @@ nav a {
   z-index: -1;
 }
 @media (min-width: 576px) {
-  #about section:first-child:after {
+  #about section:after {
     grid-column: 1/4;
     align-self: center;
     max-height: 350px;
@@ -377,7 +385,7 @@ nav a {
   }
 }
 @media (min-width: 992px) {
-  #about section:first-child:after {
+  #about section:after {
     grid-column: 1/4;
     grid-row: 3/5;
     justify-self: initial;
@@ -387,57 +395,92 @@ nav a {
     background-image: url("data:image/svg+xml,%3Csvg width='389' height='389' viewBox='0 0 389 389' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M194.44 388.88C87.2231 388.88 0 301.657 0 194.44C0 87.2231 87.2231 0 194.44 0C301.657 0 388.88 87.2231 388.88 194.44C388.856 301.657 301.632 388.88 194.44 388.88ZM194.44 2.45667C88.5609 2.45667 2.43232 88.5853 2.43232 194.464C2.43232 300.343 88.5609 386.472 194.44 386.472C300.319 386.472 386.448 300.343 386.448 194.464C386.448 88.5853 300.295 2.45667 194.44 2.45667Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M194.44 370.102C97.5848 370.102 18.7775 291.295 18.7775 194.44C18.7775 97.5848 97.5848 18.7775 194.44 18.7775C291.295 18.7775 370.102 97.5848 370.102 194.44C370.102 291.319 291.295 370.102 194.44 370.102ZM194.44 23.6665C100.26 23.6665 23.6421 100.285 23.6421 194.464C23.6421 288.644 100.26 365.262 194.44 365.262C288.62 365.262 365.238 288.644 365.238 194.464C365.238 100.285 288.62 23.6665 194.44 23.6665Z' fill='url(%23paint1_linear)' fill-opacity='0.3'/%3E%3Cpath d='M194.44 321.334C124.486 321.334 67.5698 264.418 67.5698 194.464C67.5698 124.511 124.486 67.5944 194.44 67.5944C264.394 67.5944 321.31 124.511 321.31 194.464C321.31 264.418 264.394 321.334 194.44 321.334ZM194.44 72.4347C127.162 72.4347 72.4345 127.162 72.4345 194.44C72.4345 261.718 127.162 316.445 194.44 316.445C261.718 316.445 316.445 261.718 316.445 194.44C316.445 127.186 261.718 72.4347 194.44 72.4347Z' fill='url(%23paint2_linear)' fill-opacity='0.3'/%3E%3Cpath d='M194.44 299.516C136.502 299.516 89.3635 252.378 89.3635 194.44C89.3635 136.502 136.502 89.3635 194.44 89.3635C252.378 89.3635 299.516 136.502 299.516 194.44C299.516 252.402 252.378 299.516 194.44 299.516ZM194.44 91.7958C137.84 91.7958 91.7958 137.84 91.7958 194.44C91.7958 251.04 137.84 297.084 194.44 297.084C251.04 297.084 297.084 251.04 297.084 194.44C297.084 137.864 251.04 91.7958 194.44 91.7958Z' fill='url(%23paint3_linear)'/%3E%3Cpath d='M194.44 259.821C158.393 259.821 129.083 230.511 129.083 194.464C129.083 158.417 158.393 129.108 194.44 129.108C230.487 129.108 259.797 158.417 259.797 194.464C259.797 230.487 230.463 259.821 194.44 259.821ZM194.44 133.948C161.093 133.948 133.948 161.093 133.948 194.44C133.948 227.787 161.093 254.932 194.44 254.932C227.787 254.932 254.932 227.787 254.932 194.44C254.932 161.093 227.787 133.948 194.44 133.948Z' fill='url(%23paint4_linear)' fill-opacity='0.3'/%3E%3Cpath d='M194.44 226.936C176.538 226.936 161.968 212.366 161.968 194.464C161.968 176.562 176.538 161.968 194.44 161.968C212.342 161.968 226.936 176.538 226.936 194.464C226.911 212.366 212.342 226.936 194.44 226.936ZM194.44 164.401C177.876 164.401 164.401 177.876 164.401 194.464C164.401 211.053 177.876 224.503 194.44 224.503C211.004 224.503 224.503 211.028 224.503 194.464C224.503 177.9 211.004 164.401 194.44 164.401Z' fill='url(%23paint5_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='51.0158' y1='-4.52576' x2='409.612' y2='297.409' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='64.8665' y1='14.6888' x2='388.832' y2='287.465' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='100.857' y1='64.6414' x2='334.837' y2='261.651' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear' x1='116.933' y1='86.9178' x2='310.72' y2='250.085' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint4_linear' x1='146.231' y1='127.586' x2='266.765' y2='229.075' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint5_linear' x1='170.491' y1='161.212' x2='230.399' y2='211.654' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
   }
 }
-#about section:first-child h2 {
+#about section h2 {
   grid-column: 2/7;
   align-self: center;
   margin-bottom: 1.25em;
 }
 @media (min-width: 576px) {
-  #about section:first-child h2 {
+  #about section h2 {
     grid-column: 3/7;
   }
 }
 @media (min-width: 992px) {
-  #about section:first-child h2 {
+  #about section h2 {
     grid-column: 3/6;
   }
 }
-#about section:first-child p {
+#about section p {
   grid-column: 2/14;
 }
 @media (min-width: 576px) {
-  #about section:first-child p {
+  #about section p {
     grid-column: 5/14;
   }
 }
 @media (min-width: 992px) {
-  #about section:first-child p {
+  #about section p {
     grid-column: 7/14;
   }
 }
-#about section:first-child blockquote {
+#about section blockquote {
   grid-column: 2/14;
   margin: 4rem 0;
   text-align: justify;
 }
 @media (min-width: 576px) {
-  #about section:first-child blockquote {
+  #about section blockquote {
     grid-column: 5/13;
   }
 }
 @media (min-width: 992px) {
-  #about section:first-child blockquote {
+  #about section blockquote {
     grid-column: 6/14;
     margin-top: 6rem;
     text-align: left;
   }
-  #about section:first-child blockquote p {
+  #about section blockquote p {
     display: grid;
     grid-template-columns: 1fr 7fr;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
-  #about section:first-child blockquote p a {
+  #about section blockquote p a {
     display: contents;
+  }
+}
+
+/* Section 2 */
+#about section:last-child:before {
+  content: "#02";
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+#about section:last-child h2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  grid-column: 1/14;
+  grid-row: 1/6;
+  width: 120vw;
+  height: 100%;
+  background: linear-gradient(130.1deg, rgba(251, 154, 154, 0.5) 6.59%, rgba(253, 167, 255, 0.5) 43.21%, rgba(201, 192, 255, 0.5) 92.14%);
+  filter: blur(80px);
+  transform: translateX(-10vw);
+  z-index: -1;
+}
+#about section:last-child ul {
+  grid-column: 2/14;
+}
+@media (min-width: 576px) {
+  #about section:last-child ul {
+    grid-column: 5/14;
+  }
+}
+@media (min-width: 992px) {
+  #about section:last-child ul {
+    grid-column: 7/14;
   }
 }
 
