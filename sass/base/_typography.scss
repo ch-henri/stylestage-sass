@@ -52,13 +52,6 @@ p {
 }
 
 article .container {
-  > ul:not(.features),
-  > ol {
-    > li + li {
-      margin-top: 1rem;
-    }
-  }
-
   * {
     + h2 {
       margin-top: 4rem;
