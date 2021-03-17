@@ -561,17 +561,33 @@ nav a {
   -webkit-text-stroke: 1px #ECECEC;
 }
 #guidelines section:after {
-  background-image: url("data:image/svg+xml,%3Csvg width='325' height='351' viewBox='0 0 325 351' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 87.5L324 2V264L1 349.5V87.5Z' stroke='url(%23paint0_linear)' stroke-width='2'/%3E%3Cpath d='M1 87.5L324 2V264L1 349.5V87.5Z' stroke='url(%23paint1_linear)' stroke-width='2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='43.3732' y1='-2.04418' x2='359.034' y2='245.001' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='162.5' y1='2' x2='162.5' y2='349.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-  background-image: url("data:image/svg+xml,%3Csvg width='325' height='351' viewBox='0 0 325 351' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 87.5L324 2V264L1 349.5V87.5Z' stroke='url(%23paint0_linear)' stroke-width='2'/%3E%3Cpath d='M1 87.5L324 2V264L1 349.5V87.5Z' stroke='url(%23paint1_linear)' stroke-width='2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='43.3732' y1='-2.04418' x2='359.034' y2='245.001' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='162.5' y1='2' x2='162.5' y2='349.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-  background-position: 50% 100%, 70% 100%;
-  background-repeat: repeat-x;
+  background-image: url("data:image/svg+xml,%3Csvg width='500' height='500' fill='none' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cg id='c' stroke-width='2'%3E%3Cpath d='M1 87.5L324 2v262L1 349.5v-262z' stroke='url(%23a)' /%3E%3Cpath d='M1 87.5L324 2v262L1 349.5v-262z' stroke='url(%23b)' /%3E%3C/g%3E%3C/defs%3E%3Cuse xlink:href='%23c' /%3E%3Cuse xlink:href='%23c' x='4' y='4' /%3E%3Cuse xlink:href='%23c' x='8' y='8' /%3E%3Cuse xlink:href='%23c' x='12' y='12' /%3E%3Cuse xlink:href='%23c' x='16' y='16' /%3E%3Cuse xlink:href='%23c' x='20' y='20' /%3E%3Cuse xlink:href='%23c' x='24' y='24' /%3E%3Cuse xlink:href='%23c' x='28' y='28' /%3E%3Cuse xlink:href='%23c' x='32' y='32' /%3E%3Cuse xlink:href='%23c' x='36' y='36' /%3E%3Cuse xlink:href='%23c' x='40' y='40' /%3E%3Cuse xlink:href='%23c' x='44' y='44' /%3E%3Cuse xlink:href='%23c' x='48' y='48' /%3E%3Cuse xlink:href='%23c' x='52' y='52' /%3E%3Cuse xlink:href='%23c' x='56' y='56' /%3E%3Cuse xlink:href='%23c' x='60' y='60' /%3E%3Cuse xlink:href='%23c' x='64' y='64' /%3E%3Cuse xlink:href='%23c' x='68' y='68' /%3E%3Cuse xlink:href='%23c' x='72' y='72' /%3E%3Cuse xlink:href='%23c' x='76' y='76' /%3E%3Cuse xlink:href='%23c' x='80' y='80' /%3E%3Cuse xlink:href='%23c' x='84' y='84' /%3E%3Cuse xlink:href='%23c' x='88' y='88' /%3E%3Cuse xlink:href='%23c' x='92' y='92' /%3E%3Cuse xlink:href='%23c' x='96' y='96' /%3E%3Cuse xlink:href='%23c' x='100' y='100' /%3E%3Cuse xlink:href='%23c' x='104' y='104' /%3E%3Cuse xlink:href='%23c' x='108' y='108' /%3E%3Cuse xlink:href='%23c' x='112' y='112' /%3E%3Cuse xlink:href='%23c' x='116' y='116' /%3E%3Cuse xlink:href='%23c' x='120' y='120' /%3E%3Cuse xlink:href='%23c' x='124' y='124' /%3E%3Cuse xlink:href='%23c' x='128' y='128' /%3E%3Cuse xlink:href='%23c' x='132' y='132' /%3E%3Cuse xlink:href='%23c' x='136' y='136' /%3E%3Cuse xlink:href='%23c' x='140' y='140' /%3E%3Cuse xlink:href='%23c' x='144' y='144' /%3E%3Cuse xlink:href='%23c' x='148' y='148' /%3E%3ClinearGradient id='a' x1='43.373' y1='-2.044' x2='359.034' y2='245.001' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A' /%3E%3Cstop offset='.428' stop-color='%23FDA7FF' /%3E%3Cstop offset='1' stop-color='%23C9C0FF' /%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='162.5' y1='2' x2='162.5' y2='349.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23fff' /%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0' /%3E%3C/linearGradient%3E%3C/svg%3E");
 }
 @media (min-width: 992px) {
   #guidelines section:after {
     grid-column: 1/6;
-    grid-row: 3/5;
-    justify-self: end;
+    grid-row: 2/5;
+    justify-self: start;
+    max-height: 500px;
+    max-width: 500px;
     transform: translateX(0);
+  }
+}
+#guidelines section h3,
+#guidelines section .link-guidelines {
+  grid-column: 2/14;
+  justify-self: start;
+}
+@media (min-width: 576px) {
+  #guidelines section h3,
+#guidelines section .link-guidelines {
+    grid-column: 5/14;
+  }
+}
+@media (min-width: 992px) {
+  #guidelines section h3,
+#guidelines section .link-guidelines {
+    grid-column: 7/14;
   }
 }
 
@@ -658,4 +674,30 @@ p > a {
   width: 24px;
   height: 24px;
   margin: 0.5em;
+}
+
+.link-guidelines {
+  position: relative;
+  padding: 0.675em 0.875em;
+  color: #DD2471;
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.15);
+}
+.link-guidelines:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -10%;
+  top: -25%;
+  width: 120%;
+  height: 150%;
+  background-image: url("data:image/svg+xml,%3Csvg width='318' height='68' viewBox='0 0 318 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 33.6433L158.107 0.0366211L317.5 33.8564L158.32 67.463L0 33.6433Z' fill='%23E4E4E4'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
 }
