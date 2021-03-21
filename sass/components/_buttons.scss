@@ -3,8 +3,15 @@
 /*---------------------*/
 
 p > a {
-  text-decoration: none;
+  text-decoration-color: transparent;
   color: $text-link-color;
+  &:hover {
+    text-decoration-color: $color-secondary;
+    text-decoration-style: double;
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -.1em;
+  }
 }
 
 .skip-link {
