@@ -34,9 +34,6 @@ nav {
 
 main {
 grid-column: 1 / 14;
-  h3 {
-    color: var(--color-primary);
-  }
 }
 
 aside {
@@ -46,4 +43,3 @@ aside {
 footer {
   grid-column: 2 / 14;
 }
-

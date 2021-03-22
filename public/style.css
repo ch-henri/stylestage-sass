@@ -89,6 +89,7 @@ h1 {
 h2 {
   font-family: "Space Mono", monospace;
   font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 400;
   line-height: 1.4;
   color: #A132E5;
 }
@@ -105,10 +106,17 @@ h3 {
   font-size: var(--font-size-h3);
   font-family: "Space Mono", monospace;
   font-weight: normal;
-  color: #DD2471;
   text-transform: uppercase;
-  text-decoration-style: wavy;
   writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+#contribute h3 {
+  font-size: 1.125rem;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+  color: #595959;
 }
 
 h4 {
@@ -163,12 +171,45 @@ blockquote strong {
   color: #A132E5;
 }
 
+#about ul {
+  list-style-type: none;
+}
+#about ul li {
+  font-family: "Space Mono", monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: #F8F8F8;
+}
+
+#guidelines section:before {
+  color: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-clip: text;
+  text-shadow: 0px 2px 5px white;
+  -webkit-text-stroke: 1px #ECECEC;
+}
+
 #guidelines section:first-child p:nth-of-type(1),
 #contribute section:first-child p:nth-of-type(1) {
   font-weight: 300;
   font-style: italic;
   font-size: 1.375rem;
   line-height: 1.6;
+}
+#guidelines ol,
+#contribute ol {
+  list-style-type: upper-roman;
+}
+#guidelines ol li,
+#contribute ol li {
+  flex: 0 1 45%;
+}
+#guidelines ol li::marker,
+#contribute ol li::marker {
+  color: red;
+  font-size: 1.25rem;
+  vertical-align: bottom;
 }
 
 /*-------------------*/
@@ -204,9 +245,6 @@ nav {
 
 main {
   grid-column: 1/14;
-}
-main h3 {
-  color: var(--color-primary);
 }
 
 aside {
@@ -333,7 +371,8 @@ nav a {
 /*-------------------*/
 #about section,
 #guidelines section,
-#contribute section {
+#contribute section,
+#files .container {
   position: relative;
   display: grid;
   grid-template-columns: minmax(10px, 1fr) repeat(12, minmax(0, 80px));
@@ -343,13 +382,15 @@ nav a {
 @media (min-width: 992px) {
   #about section,
 #guidelines section,
-#contribute section {
+#contribute section,
+#files .container {
     padding: 5rem 0;
   }
 }
 #about section:before,
 #guidelines section:before,
-#contribute section:before {
+#contribute section:before,
+#files .container:before {
   content: "#01";
   position: absolute;
   display: block;
@@ -365,7 +406,8 @@ nav a {
 @media (min-width: 576px) {
   #about section:before,
 #guidelines section:before,
-#contribute section:before {
+#contribute section:before,
+#files .container:before {
     grid-column: 2/4;
     grid-row: 2/3;
     justify-self: start;
@@ -374,13 +416,15 @@ nav a {
 @media (min-width: 992px) {
   #about section:before,
 #guidelines section:before,
-#contribute section:before {
+#contribute section:before,
+#files .container:before {
     font-size: 9rem;
   }
 }
 #about section:after,
 #guidelines section:after,
-#contribute section:after {
+#contribute section:after,
+#files .container:after {
   content: "";
   position: absolute;
   display: block;
@@ -398,7 +442,8 @@ nav a {
 @media (min-width: 576px) {
   #about section:after,
 #guidelines section:after,
-#contribute section:after {
+#contribute section:after,
+#files .container:after {
     grid-column: 1/4;
     align-self: center;
     max-height: 350px;
@@ -410,7 +455,8 @@ nav a {
 @media (min-width: 992px) {
   #about section:after,
 #guidelines section:after,
-#contribute section:after {
+#contribute section:after,
+#files .container:after {
     grid-column: 1/4;
     grid-row: 3/5;
     justify-self: initial;
@@ -422,7 +468,8 @@ nav a {
 }
 #about section h2,
 #guidelines section h2,
-#contribute section h2 {
+#contribute section h2,
+#files .container h2 {
   grid-column: 2/7;
   align-self: center;
   margin-bottom: 1.25em;
@@ -430,39 +477,45 @@ nav a {
 @media (min-width: 576px) {
   #about section h2,
 #guidelines section h2,
-#contribute section h2 {
+#contribute section h2,
+#files .container h2 {
     grid-column: 3/7;
   }
 }
 @media (min-width: 992px) {
   #about section h2,
 #guidelines section h2,
-#contribute section h2 {
+#contribute section h2,
+#files .container h2 {
     grid-column: 3/6;
   }
 }
 #about section p,
 #guidelines section p,
-#contribute section p {
+#contribute section p,
+#files .container p {
   grid-column: 2/14;
 }
 @media (min-width: 576px) {
   #about section p,
 #guidelines section p,
-#contribute section p {
+#contribute section p,
+#files .container p {
     grid-column: 5/14;
   }
 }
 @media (min-width: 992px) {
   #about section p,
 #guidelines section p,
-#contribute section p {
+#contribute section p,
+#files .container p {
     grid-column: 7/14;
   }
 }
 #about section blockquote,
 #guidelines section blockquote,
-#contribute section blockquote {
+#contribute section blockquote,
+#files .container blockquote {
   grid-column: 2/14;
   margin: 4rem 0;
   text-align: justify;
@@ -470,33 +523,37 @@ nav a {
 @media (min-width: 576px) {
   #about section blockquote,
 #guidelines section blockquote,
-#contribute section blockquote {
+#contribute section blockquote,
+#files .container blockquote {
     grid-column: 5/13;
   }
 }
 @media (min-width: 992px) {
   #about section blockquote,
 #guidelines section blockquote,
-#contribute section blockquote {
+#contribute section blockquote,
+#files .container blockquote {
     grid-column: 6/14;
     margin-top: 6rem;
     text-align: left;
   }
   #about section blockquote p,
 #guidelines section blockquote p,
-#contribute section blockquote p {
+#contribute section blockquote p,
+#files .container blockquote p {
     display: grid;
     grid-template-columns: 1fr 7fr;
     font-size: 1.25rem;
   }
   #about section blockquote p a,
 #guidelines section blockquote p a,
-#contribute section blockquote p a {
+#contribute section blockquote p a,
+#files .container blockquote p a {
     display: contents;
   }
 }
 
-/* Section 2 
+/* Section 2
    Modern CSS Under the Spotlight */
 #about section:last-child:before {
   content: "#02";
@@ -540,7 +597,6 @@ nav a {
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 2rem;
-  list-style-type: none;
 }
 @media (min-width: 576px) {
   #about section:last-child ul {
@@ -562,11 +618,6 @@ nav a {
   align-items: center;
   margin: 0.25rem 0.5rem 0.25rem 0;
   padding: 0.875em 0.75em;
-  font-family: "Space Mono", monospace;
-  font-size: 0.875rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  background-color: #F8F8F8;
 }
 #about section:last-child ul li:before {
   content: "";
@@ -578,15 +629,10 @@ nav a {
   background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='26' height='26' fill='white'/%3E%3Cpath d='M13.6667 6.83337L7 14.8334H13L12.3333 20.1667L19 12.1667H13L13.6667 6.83337Z' stroke='%23DD2471' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
-/* Section 3 
+/* Section 3
    Guidelines */
 #guidelines section:before {
   content: "#03";
-  color: transparent;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-clip: text;
-  text-shadow: 0px 2px 5px white;
-  -webkit-text-stroke: 1px #ECECEC;
 }
 #guidelines section:after {
   grid-column: 2/15;
@@ -632,7 +678,7 @@ nav a {
   }
 }
 
-/* Section 4 
+/* Section 4
    #contribute */
 #contribute section:first-child:before {
   content: "#04";
@@ -642,11 +688,45 @@ nav a {
   mask-repeat: no-repeat;
   mask-position: center;
 }
-#contribute section:first-child:after {
+#contribute section:after,
+#contribute footer .container:after,
+#contribute footer .container:before,
+#contribute section:nth-child(2):before {
   display: none;
 }
+#contribute h3 {
+  grid-column: 4/5;
+  text-align: center;
+}
 #contribute ol {
-  grid-column: 2/14;
+  grid-column: 5/14;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: space-between;
+}
+#contribute ol li {
+  margin: 2rem 0;
+}
+
+/* Section 4
+   #files */
+#files .container:before,
+#files .container:after {
+  display: none;
+}
+#files .link-downloadcss,
+#files .link-downloadhtml {
+  place-self: center;
+}
+#files .link-downloadcss {
+  grid-column: 5/9;
+}
+#files .link-downloadhtml {
+  grid-column: 10/14;
+}
+#files .link-codepen {
+  grid-column: 5/14;
 }
 
 .page-footer {
@@ -679,11 +759,13 @@ nav a {
 /*---------------------*/
 /* >>>  Butttons.scss  */
 /*---------------------*/
-p > a {
+p > a,
+li > a {
   text-decoration-color: transparent;
   color: #DD2471;
 }
-p > a:hover {
+p > a:hover,
+li > a:hover {
   text-decoration-color: #A132E5;
   text-decoration-style: double;
   text-decoration-thickness: 3px;
@@ -741,7 +823,9 @@ p > a:hover {
   margin: 0.5em;
 }
 
-.link-guidelines {
+.link-guidelines,
+.link-downloadcss,
+.link-downloadhtml {
   position: relative;
   padding: 0.675em 0.875em;
   color: #DD2471;
@@ -753,16 +837,44 @@ p > a:hover {
   background-color: white;
   box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.15);
 }
-.link-guidelines:before {
+.link-guidelines:before,
+.link-downloadcss:before,
+.link-downloadhtml:before {
   content: "";
   display: block;
   position: absolute;
-  left: -10%;
-  top: -25%;
-  width: 120%;
-  height: 150%;
-  background-image: url("data:image/svg+xml,%3Csvg width='318' height='68' viewBox='0 0 318 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 33.6433L158.107 0.0366211L317.5 33.8564L158.32 67.463L0 33.6433Z' fill='%23E4E4E4'/%3E%3C/svg%3E%0A");
+  left: -25px;
+  top: -11px;
+  width: calc(100% + 50px);
+  height: calc(100% + 22px);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 25' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 13.75L50.5 0L100 13.75L50.5 25L0 13.75Z' fill='%23C4C4C4'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
+}
+
+.link-codepen {
+  position: relative;
+  padding: 4rem 0;
+  color: #DD2471;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: 1rem solid white;
+  outline-offset: -1rem;
+  background: linear-gradient(91.36deg, #FFC9C9 0%, #F0CFFF 100%);
+}
+.link-codepen:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
 }
