@@ -36,8 +36,6 @@ h3 {
   font-family: $space-mono;
   font-weight: normal;
   text-transform: uppercase;
-  writing-mode:vertical-rl;
-  transform: rotate(180deg);
 }
 
 #contribute h3 {
@@ -140,10 +138,6 @@ blockquote strong {
 
   ol {
     list-style-type: upper-roman;
-  }
-
-  ol li {
-   flex: 0 1 45%;
   }
 
   ol li::marker {

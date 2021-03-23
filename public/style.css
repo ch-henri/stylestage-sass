@@ -107,8 +107,6 @@ h3 {
   font-family: "Space Mono", monospace;
   font-weight: normal;
   text-transform: uppercase;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
 }
 
 #contribute h3 {
@@ -200,10 +198,6 @@ blockquote strong {
 #guidelines ol,
 #contribute ol {
   list-style-type: upper-roman;
-}
-#guidelines ol li,
-#contribute ol li {
-  flex: 0 1 45%;
 }
 #guidelines ol li::marker,
 #contribute ol li::marker {
@@ -372,7 +366,8 @@ nav a {
 #about section,
 #guidelines section,
 #contribute section,
-#files .container {
+#files .container,
+#styles .container {
   position: relative;
   display: grid;
   grid-template-columns: minmax(10px, 1fr) repeat(12, minmax(0, 80px));
@@ -383,14 +378,16 @@ nav a {
   #about section,
 #guidelines section,
 #contribute section,
-#files .container {
+#files .container,
+#styles .container {
     padding: 5rem 0;
   }
 }
 #about section:before,
 #guidelines section:before,
 #contribute section:before,
-#files .container:before {
+#files .container:before,
+#styles .container:before {
   content: "#01";
   position: absolute;
   display: block;
@@ -407,7 +404,8 @@ nav a {
   #about section:before,
 #guidelines section:before,
 #contribute section:before,
-#files .container:before {
+#files .container:before,
+#styles .container:before {
     grid-column: 2/4;
     grid-row: 2/3;
     justify-self: start;
@@ -417,14 +415,16 @@ nav a {
   #about section:before,
 #guidelines section:before,
 #contribute section:before,
-#files .container:before {
+#files .container:before,
+#styles .container:before {
     font-size: 9rem;
   }
 }
 #about section:after,
 #guidelines section:after,
 #contribute section:after,
-#files .container:after {
+#files .container:after,
+#styles .container:after {
   content: "";
   position: absolute;
   display: block;
@@ -443,7 +443,8 @@ nav a {
   #about section:after,
 #guidelines section:after,
 #contribute section:after,
-#files .container:after {
+#files .container:after,
+#styles .container:after {
     grid-column: 1/4;
     align-self: center;
     max-height: 350px;
@@ -456,7 +457,8 @@ nav a {
   #about section:after,
 #guidelines section:after,
 #contribute section:after,
-#files .container:after {
+#files .container:after,
+#styles .container:after {
     grid-column: 1/4;
     grid-row: 3/5;
     justify-self: initial;
@@ -469,7 +471,8 @@ nav a {
 #about section h2,
 #guidelines section h2,
 #contribute section h2,
-#files .container h2 {
+#files .container h2,
+#styles .container h2 {
   grid-column: 2/7;
   align-self: center;
   margin-bottom: 1.25em;
@@ -478,7 +481,8 @@ nav a {
   #about section h2,
 #guidelines section h2,
 #contribute section h2,
-#files .container h2 {
+#files .container h2,
+#styles .container h2 {
     grid-column: 3/7;
   }
 }
@@ -486,21 +490,24 @@ nav a {
   #about section h2,
 #guidelines section h2,
 #contribute section h2,
-#files .container h2 {
+#files .container h2,
+#styles .container h2 {
     grid-column: 3/6;
   }
 }
 #about section p,
 #guidelines section p,
 #contribute section p,
-#files .container p {
+#files .container p,
+#styles .container p {
   grid-column: 2/14;
 }
 @media (min-width: 576px) {
   #about section p,
 #guidelines section p,
 #contribute section p,
-#files .container p {
+#files .container p,
+#styles .container p {
     grid-column: 5/14;
   }
 }
@@ -508,14 +515,16 @@ nav a {
   #about section p,
 #guidelines section p,
 #contribute section p,
-#files .container p {
+#files .container p,
+#styles .container p {
     grid-column: 7/14;
   }
 }
 #about section blockquote,
 #guidelines section blockquote,
 #contribute section blockquote,
-#files .container blockquote {
+#files .container blockquote,
+#styles .container blockquote {
   grid-column: 2/14;
   margin: 4rem 0;
   text-align: justify;
@@ -524,7 +533,8 @@ nav a {
   #about section blockquote,
 #guidelines section blockquote,
 #contribute section blockquote,
-#files .container blockquote {
+#files .container blockquote,
+#styles .container blockquote {
     grid-column: 5/13;
   }
 }
@@ -532,7 +542,8 @@ nav a {
   #about section blockquote,
 #guidelines section blockquote,
 #contribute section blockquote,
-#files .container blockquote {
+#files .container blockquote,
+#styles .container blockquote {
     grid-column: 6/14;
     margin-top: 6rem;
     text-align: left;
@@ -540,7 +551,8 @@ nav a {
   #about section blockquote p,
 #guidelines section blockquote p,
 #contribute section blockquote p,
-#files .container blockquote p {
+#files .container blockquote p,
+#styles .container blockquote p {
     display: grid;
     grid-template-columns: 1fr 7fr;
     font-size: 1.25rem;
@@ -548,7 +560,8 @@ nav a {
   #about section blockquote p a,
 #guidelines section blockquote p a,
 #contribute section blockquote p a,
-#files .container blockquote p a {
+#files .container blockquote p a,
+#styles .container blockquote p a {
     display: contents;
   }
 }
@@ -680,6 +693,15 @@ nav a {
 
 /* Section 4
    #contribute */
+#contribute section {
+  padding-bottom: 0;
+}
+#contribute section:after,
+#contribute footer .container:after,
+#contribute footer .container:before,
+#contribute section:nth-child(2):before {
+  display: none;
+}
 #contribute section:first-child:before {
   content: "#04";
   background: linear-gradient(130.1deg, #fb9a9a 6.59%, #fda7ff 43.21%, #c9c0ff 92.14%) no-repeat;
@@ -688,29 +710,50 @@ nav a {
   mask-repeat: no-repeat;
   mask-position: center;
 }
-#contribute section:after,
-#contribute footer .container:after,
-#contribute footer .container:before,
-#contribute section:nth-child(2):before {
-  display: none;
-}
 #contribute h3 {
-  grid-column: 4/5;
-  text-align: center;
+  grid-column: 2/5;
+}
+@media (min-width: 576px) {
+  #contribute h3 {
+    grid-column: 2/3;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
+@media (min-width: 576px) {
+  #contribute h3 {
+    grid-column: 3/4;
+  }
 }
 #contribute ol {
-  grid-column: 5/14;
+  grid-column: 1/14;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 1rem 0;
   justify-content: space-between;
 }
+@media (min-width: 576px) {
+  #contribute ol {
+    grid-column: 5/14;
+    padding: 0;
+  }
+}
 #contribute ol li {
-  margin: 2rem 0;
+  margin: 0.5rem 0;
+}
+@media (min-width: 992px) {
+  #contribute ol li {
+    flex: 0 1 45%;
+    margin: 2rem 0;
+  }
 }
 
 /* Section 4
    #files */
+#files .container {
+  padding: 0;
+}
 #files .container:before,
 #files .container:after {
   display: none;
@@ -720,13 +763,53 @@ nav a {
   place-self: center;
 }
 #files .link-downloadcss {
-  grid-column: 5/9;
+  grid-column: 1/8;
 }
 #files .link-downloadhtml {
-  grid-column: 10/14;
+  grid-column: 8/14;
 }
 #files .link-codepen {
-  grid-column: 5/14;
+  grid-column: 2/14;
+}
+#files .link-downloadcss,
+#files .link-downloadhtml,
+#files .link-codepen {
+  margin: 1.5rem 0;
+}
+@media (min-width: 576px) {
+  #files .link-downloadcss {
+    grid-column: 5/9;
+  }
+  #files .link-downloadhtml {
+    grid-column: 10/14;
+  }
+  #files .link-codepen {
+    grid-column: 5/14;
+  }
+}
+#files h3 {
+  grid-row: 1/3;
+  margin: 1rem 0;
+}
+
+/* Section 4
+   #styles */
+#styles .container:after {
+  display: none;
+}
+#styles .container ul {
+  grid-column: 7/14;
+  display: flex;
+  justify-content: space-between;
+}
+#styles .container ul li {
+  flex: 0 1 30%;
+  margin-bottom: 3rem;
+}
+#styles .container .link-allstyles {
+  grid-column: 7/14;
+  justify-self: start;
+  margin-top: 3.5rem;
 }
 
 .page-footer {
@@ -825,11 +908,13 @@ li > a:hover {
 
 .link-guidelines,
 .link-downloadcss,
-.link-downloadhtml {
+.link-downloadhtml,
+.link-allstyles {
   position: relative;
   padding: 0.675em 0.875em;
   color: #DD2471;
   font-family: "Space Mono", monospace;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-decoration: none;
@@ -839,7 +924,8 @@ li > a:hover {
 }
 .link-guidelines:before,
 .link-downloadcss:before,
-.link-downloadhtml:before {
+.link-downloadhtml:before,
+.link-allstyles:before {
   content: "";
   display: block;
   position: absolute;
@@ -856,25 +942,106 @@ li > a:hover {
 
 .link-codepen {
   position: relative;
-  padding: 4rem 0;
-  color: #DD2471;
-  text-align: center;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: 1rem solid white;
-  outline-offset: -1rem;
+  padding: 1rem;
+  height: 10rem;
+  width: 100%;
+  color: transparent;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(91.36deg, #FFC9C9 0%, #F0CFFF 100%);
+  background-clip: content-box;
 }
-.link-codepen:before {
+.link-codepen:before, .link-codepen:after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
-  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.link-codepen:before {
+  /* icon codepen */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 942 144' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath filter='url(%23f)' d='M817.5 30.25L858.75 57.0625V85.9375L817.5 112.75L776.25 85.9375V57.0625L817.5 30.25Z' /%3E%3Cpath filter='url(%23f)' d='M817.5 112.75V85.9375' /%3E%3Cpath filter='url(%23f)' d='M858.75 57.0625L817.5 85.9375L776.25 57.0625'/%3E%3Cpath filter='url(%23f)' d='M776.25 85.9375L817.5 57.0625L858.75 85.9375'/%3E%3Cpath filter='url(%23f)' d='M817.5 30.25V57.0625'/%3E%3Cpath filter='url(%23f)' d='M124.5 30.25L165.75 57.0625V85.9375L124.5 112.75L83.25 85.9375V57.0625L124.5 30.25Z'/%3E%3Cpath filter='url(%23f)' d='M124.5 112.75V85.9375'/%3E%3Cpath filter='url(%23f)' d='M165.75 57.0625L124.5 85.9375L83.25 57.0625'/%3E%3Cpath filter='url(%23f)' d='M83.25 85.9375L124.5 57.0625L165.75 85.9375'/%3E%3Cpath filter='url(%23f)' d='M124.5 30.25V57.0625'/%3E%3Cdefs%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1'/%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.670588 0 0 0 0 0.121569 0 0 0 0 0.121569 0 0 0 0.61 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow'/%3E%3C/filter%3E%3C/defs%3E%3Cstyle%3E path%7Bstroke:%23fff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round%7D %3C/style%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.link-codepen:after {
+  content: "Fork the codepen";
+  color: #DD2471;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* corner top left */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L38 0L0 38L0 0Z' fill='white'/%3E%3Cpath filter='url(%23f)' d='M60 0H38L0 38V60L60 0Z' fill='white'/%3E%3Cdefs%3E%3Cfilter id='f' x='0' y='0' width='62' height='62' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='2'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: 4rem 4rem;
+}
+
+/*---------------------*/
+/* >>>  Features.scss  */
+/*---------------------*/
+ul.features {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.features li {
+  position: relative;
+  height: 230px;
+  font-family: "Space Mono", monospace;
+  border: 1px solid black;
+}
+ul.features li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M1 4.41421L29.5858 33H1V4.41421Z' fill='%23EFEFEF' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: top right;
+  transform: translate(2px, -2px);
+}
+ul.features li:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1rem;
+  width: 80%;
+  height: 1.5rem;
+  margin: 0 auto;
+  background-color: #E7E7E7;
+  border-radius: 50%;
+  filter: blur(5px);
+}
+ul.features span:first-child {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+ul.features a {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  color: #DD2471;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+ul.features a ~ span {
+  padding: 0.5rem 0.75rem;
+  background-color: #F6F6F6;
+  border-top: 1px solid black;
 }

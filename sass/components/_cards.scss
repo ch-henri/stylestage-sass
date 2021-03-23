@@ -1,0 +1,71 @@
+/*---------------------*/
+/* >>>  Features.scss  */
+/*---------------------*/
+
+ul.features {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    position: relative;
+    height: 230px;
+    font-family: $space-mono;
+    border: 1px solid black;
+  }
+
+  & li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M1 4.41421L29.5858 33H1V4.41421Z' fill='%23EFEFEF' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: top right;
+    transform: translate(2px, -2px);
+  }
+
+  & li:after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 1rem;
+    width: 80%;
+    height: 1.5rem;
+    margin: 0 auto;
+    background-color: #E7E7E7;
+    border-radius: 50%;
+    filter: blur(5px);
+  }
+
+  & span:first-child {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .875rem;
+  }
+
+  & a {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    padding: .75rem;
+    font-size: 1.25rem;
+    color: $text-link-color;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  & a ~ span {
+    padding: .5rem .75rem;
+    background-color: #F6F6F6;
+    border-top: 1px solid black;
+  }
+
+}
