@@ -22,11 +22,12 @@ ul.features {
     left: 0;
     right: 0;
     width: 100%;
-    height: 1rem;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M1 4.41421L29.5858 33H1V4.41421Z' fill='%23EFEFEF' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+    height: 2rem;
+    //background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M1 4.41421L29.5858 33H1V4.41421Z' fill='%23EFEFEF' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M0.5 3.20711L30.7929 33.5H0.5V3.20711Z' fill='%23EFEFEF' stroke='black'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: top right;
-    transform: translate(2px, -2px);
+    transform: translate(4px, -4px);
   }
 
   & li:after {
@@ -53,8 +54,7 @@ ul.features {
   & a {
     flex: 1 0 auto;
     display: flex;
-    align-items: center;
-    padding: .75rem;
+    padding: 2.125rem .75rem .75rem .75rem;
     font-size: 1.25rem;
     color: $text-link-color;
     text-decoration: none;

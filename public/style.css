@@ -88,18 +88,18 @@ h1 {
 
 h2 {
   font-family: "Space Mono", monospace;
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  font-weight: 400;
-  line-height: 1.4;
-  color: #A132E5;
-}
-
-#main h2 {
-  font-family: "Space Mono", monospace;
   font-style: italic;
   font-size: clamp(1.5rem, calc(2vw + .75rem), 2.25rem);
   line-height: 1.2;
   color: black;
+}
+
+header h2 {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: #A132E5;
 }
 
 h3 {
@@ -242,11 +242,11 @@ main {
 }
 
 aside {
-  grid-column: 2/14;
+  grid-column: 1/14;
 }
 
 footer {
-  grid-column: 2/14;
+  grid-column: 1/15;
 }
 
 /*----------------------*/
@@ -363,9 +363,7 @@ nav a {
 /*-------------------*/
 /* >>>>> Main.scss   */
 /*-------------------*/
-#about section,
-#guidelines section,
-#contribute section,
+main section,
 #files .container,
 #styles .container {
   position: relative;
@@ -375,17 +373,13 @@ nav a {
   padding: 3rem 0;
 }
 @media (min-width: 992px) {
-  #about section,
-#guidelines section,
-#contribute section,
+  main section,
 #files .container,
 #styles .container {
     padding: 5rem 0;
   }
 }
-#about section:before,
-#guidelines section:before,
-#contribute section:before,
+main section:before,
 #files .container:before,
 #styles .container:before {
   content: "#01";
@@ -401,9 +395,7 @@ nav a {
   color: #F5F5F5;
 }
 @media (min-width: 576px) {
-  #about section:before,
-#guidelines section:before,
-#contribute section:before,
+  main section:before,
 #files .container:before,
 #styles .container:before {
     grid-column: 2/4;
@@ -412,17 +404,13 @@ nav a {
   }
 }
 @media (min-width: 992px) {
-  #about section:before,
-#guidelines section:before,
-#contribute section:before,
+  main section:before,
 #files .container:before,
 #styles .container:before {
     font-size: 9rem;
   }
 }
-#about section:after,
-#guidelines section:after,
-#contribute section:after,
+main section:after,
 #files .container:after,
 #styles .container:after {
   content: "";
@@ -440,9 +428,7 @@ nav a {
   z-index: -1;
 }
 @media (min-width: 576px) {
-  #about section:after,
-#guidelines section:after,
-#contribute section:after,
+  main section:after,
 #files .container:after,
 #styles .container:after {
     grid-column: 1/4;
@@ -454,9 +440,7 @@ nav a {
   }
 }
 @media (min-width: 992px) {
-  #about section:after,
-#guidelines section:after,
-#contribute section:after,
+  main section:after,
 #files .container:after,
 #styles .container:after {
     grid-column: 1/4;
@@ -468,9 +452,7 @@ nav a {
     background-image: url("data:image/svg+xml,%3Csvg width='389' height='389' viewBox='0 0 389 389' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M194.44 388.88C87.2231 388.88 0 301.657 0 194.44C0 87.2231 87.2231 0 194.44 0C301.657 0 388.88 87.2231 388.88 194.44C388.856 301.657 301.632 388.88 194.44 388.88ZM194.44 2.45667C88.5609 2.45667 2.43232 88.5853 2.43232 194.464C2.43232 300.343 88.5609 386.472 194.44 386.472C300.319 386.472 386.448 300.343 386.448 194.464C386.448 88.5853 300.295 2.45667 194.44 2.45667Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M194.44 370.102C97.5848 370.102 18.7775 291.295 18.7775 194.44C18.7775 97.5848 97.5848 18.7775 194.44 18.7775C291.295 18.7775 370.102 97.5848 370.102 194.44C370.102 291.319 291.295 370.102 194.44 370.102ZM194.44 23.6665C100.26 23.6665 23.6421 100.285 23.6421 194.464C23.6421 288.644 100.26 365.262 194.44 365.262C288.62 365.262 365.238 288.644 365.238 194.464C365.238 100.285 288.62 23.6665 194.44 23.6665Z' fill='url(%23paint1_linear)' fill-opacity='0.3'/%3E%3Cpath d='M194.44 321.334C124.486 321.334 67.5698 264.418 67.5698 194.464C67.5698 124.511 124.486 67.5944 194.44 67.5944C264.394 67.5944 321.31 124.511 321.31 194.464C321.31 264.418 264.394 321.334 194.44 321.334ZM194.44 72.4347C127.162 72.4347 72.4345 127.162 72.4345 194.44C72.4345 261.718 127.162 316.445 194.44 316.445C261.718 316.445 316.445 261.718 316.445 194.44C316.445 127.186 261.718 72.4347 194.44 72.4347Z' fill='url(%23paint2_linear)' fill-opacity='0.3'/%3E%3Cpath d='M194.44 299.516C136.502 299.516 89.3635 252.378 89.3635 194.44C89.3635 136.502 136.502 89.3635 194.44 89.3635C252.378 89.3635 299.516 136.502 299.516 194.44C299.516 252.402 252.378 299.516 194.44 299.516ZM194.44 91.7958C137.84 91.7958 91.7958 137.84 91.7958 194.44C91.7958 251.04 137.84 297.084 194.44 297.084C251.04 297.084 297.084 251.04 297.084 194.44C297.084 137.864 251.04 91.7958 194.44 91.7958Z' fill='url(%23paint3_linear)'/%3E%3Cpath d='M194.44 259.821C158.393 259.821 129.083 230.511 129.083 194.464C129.083 158.417 158.393 129.108 194.44 129.108C230.487 129.108 259.797 158.417 259.797 194.464C259.797 230.487 230.463 259.821 194.44 259.821ZM194.44 133.948C161.093 133.948 133.948 161.093 133.948 194.44C133.948 227.787 161.093 254.932 194.44 254.932C227.787 254.932 254.932 227.787 254.932 194.44C254.932 161.093 227.787 133.948 194.44 133.948Z' fill='url(%23paint4_linear)' fill-opacity='0.3'/%3E%3Cpath d='M194.44 226.936C176.538 226.936 161.968 212.366 161.968 194.464C161.968 176.562 176.538 161.968 194.44 161.968C212.342 161.968 226.936 176.538 226.936 194.464C226.911 212.366 212.342 226.936 194.44 226.936ZM194.44 164.401C177.876 164.401 164.401 177.876 164.401 194.464C164.401 211.053 177.876 224.503 194.44 224.503C211.004 224.503 224.503 211.028 224.503 194.464C224.503 177.9 211.004 164.401 194.44 164.401Z' fill='url(%23paint5_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='51.0158' y1='-4.52576' x2='409.612' y2='297.409' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='64.8665' y1='14.6888' x2='388.832' y2='287.465' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='100.857' y1='64.6414' x2='334.837' y2='261.651' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear' x1='116.933' y1='86.9178' x2='310.72' y2='250.085' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint4_linear' x1='146.231' y1='127.586' x2='266.765' y2='229.075' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint5_linear' x1='170.491' y1='161.212' x2='230.399' y2='211.654' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
   }
 }
-#about section h2,
-#guidelines section h2,
-#contribute section h2,
+main section h2,
 #files .container h2,
 #styles .container h2 {
   grid-column: 2/7;
@@ -478,90 +460,63 @@ nav a {
   margin-bottom: 1.25em;
 }
 @media (min-width: 576px) {
-  #about section h2,
-#guidelines section h2,
-#contribute section h2,
+  main section h2,
 #files .container h2,
 #styles .container h2 {
     grid-column: 3/7;
   }
 }
 @media (min-width: 992px) {
-  #about section h2,
-#guidelines section h2,
-#contribute section h2,
+  main section h2,
 #files .container h2,
 #styles .container h2 {
     grid-column: 3/6;
   }
 }
-#about section p,
-#guidelines section p,
-#contribute section p,
+main section p,
 #files .container p,
 #styles .container p {
   grid-column: 2/14;
 }
 @media (min-width: 576px) {
-  #about section p,
-#guidelines section p,
-#contribute section p,
+  main section p,
 #files .container p,
 #styles .container p {
     grid-column: 5/14;
   }
 }
 @media (min-width: 992px) {
-  #about section p,
-#guidelines section p,
-#contribute section p,
+  main section p,
 #files .container p,
 #styles .container p {
     grid-column: 7/14;
   }
 }
-#about section blockquote,
-#guidelines section blockquote,
-#contribute section blockquote,
-#files .container blockquote,
-#styles .container blockquote {
+
+/* Section 1
+   Setting the stage */
+#about blockquote {
   grid-column: 2/14;
   margin: 4rem 0;
   text-align: justify;
 }
 @media (min-width: 576px) {
-  #about section blockquote,
-#guidelines section blockquote,
-#contribute section blockquote,
-#files .container blockquote,
-#styles .container blockquote {
+  #about blockquote {
     grid-column: 5/13;
   }
 }
 @media (min-width: 992px) {
-  #about section blockquote,
-#guidelines section blockquote,
-#contribute section blockquote,
-#files .container blockquote,
-#styles .container blockquote {
+  #about blockquote {
     grid-column: 6/14;
     margin-top: 6rem;
     text-align: left;
   }
-  #about section blockquote p,
-#guidelines section blockquote p,
-#contribute section blockquote p,
-#files .container blockquote p,
-#styles .container blockquote p {
+  #about blockquote p {
     display: grid;
     grid-template-columns: 1fr 7fr;
     font-size: 1.25rem;
   }
-  #about section blockquote p a,
-#guidelines section blockquote p a,
-#contribute section blockquote p a,
-#files .container blockquote p a,
-#styles .container blockquote p a {
+  #about blockquote p a {
     display: contents;
   }
 }
@@ -797,13 +752,43 @@ nav a {
 #styles .container:after {
   display: none;
 }
+#styles .container:before {
+  content: "#05";
+  grid-row: 1/2;
+  align-self: end;
+}
+@media (min-width: 576px) {
+  #styles .container:before {
+    grid-column: 2/14;
+    justify-self: end;
+  }
+}
+@media (min-width: 992px) {
+  #styles .container:before {
+    justify-self: start;
+  }
+}
+#styles .container h2 {
+  align-self: initial;
+}
 #styles .container ul {
-  grid-column: 7/14;
+  grid-column: 2/14;
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 576px) {
+  #styles .container ul {
+    grid-column: 4/14;
+  }
+}
+@media (min-width: 992px) {
+  #styles .container ul {
+    grid-column: 7/14;
+  }
+}
 #styles .container ul li {
   flex: 0 1 30%;
+  max-width: 200px;
   margin-bottom: 3rem;
 }
 #styles .container .link-allstyles {
@@ -812,31 +797,159 @@ nav a {
   margin-top: 3.5rem;
 }
 
-.page-footer {
-  --logomark-height: 2em;
-  --logomark-padding: 0;
-  position: relative;
-  padding: 3rem 1rem;
-  background-color: var(--color-primary);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d2fbf7' fill-opacity='1'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: center -34px;
-  color: var(--color-light);
+/* Section 4
+   #page-footer */
+.page-footer .container {
+  display: grid;
+  grid-template-columns: minmax(10px, 1fr) repeat(12, minmax(0, 80px)) minmax(10px, 1fr);
+  column-gap: 1rem;
 }
+.page-footer .container:before {
+  content: "";
+  grid-column: 1/15;
+  grid-row: 1/2;
+  background-color: white;
+}
+.page-footer .container:after {
+  content: "";
+  grid-column: 1/6;
+  grid-row: 1/5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 368 992'%3E%3Cdefs%3E%3Cstyle%3E.prefix__a%7Bfill:%23969696%7D%3C/style%3E%3C/defs%3E%3Cpath class='prefix__a' d='M321 1h3v984h-3zM349 45h3v947h-3zM293 6h3v979h-3zM265 11h3v972h-3zM237 11h3v966h-3zM209 25h3v947h-3zM181 42h3v928h-3zM153 49h3v917h-3zM125 75h3v887h-3zM97 95h3v860h-3zM69 113h3v841h-3zM41 126h3v818h-3zM13 145h3v773h-3z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+.page-footer .container p:first-child {
+  grid-column: 6/14;
+  grid-row: 1/2;
+  margin-top: 2rem;
+}
+@media (min-width: 992px) {
+  .page-footer .container:after {
+    grid-column: 1/5;
+  }
+  .page-footer .container p:first-child {
+    grid-column: 5/10;
+  }
+}
+@media (min-width: 1300px) {
+  .page-footer .container:after {
+    grid-column: 1/3;
+  }
+  .page-footer .container p:first-child {
+    grid-column: 3/7;
+  }
+}
+.page-footer .container ul, .page-footer .container p {
+  grid-column: 2/14;
+}
+@media (min-width: 576px) {
+  .page-footer .container ul, .page-footer .container p {
+    grid-column: 4/14;
+  }
+}
+@media (min-width: 992px) {
+  .page-footer .container ul, .page-footer .container p {
+    grid-column: 6/14;
+  }
+}
+.page-footer .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style-type: none;
+}
+.page-footer .container ul li {
+  flex: 1 1 100%;
+}
+@media (min-width: 576px) {
+  .page-footer .container ul li {
+    flex: 1 1 50%;
+  }
+}
+
 .page-footer p:first-child {
-  margin-top: 3rem;
-  font-weight: var(--font-weight-strong);
-  letter-spacing: 0.03em;
-  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(1.25rem, calc(.5rem + 2.5vw), 2.125rem);
+  line-height: 1.6;
+  color: black;
 }
-.page-footer p a {
-  color: inherit;
+
+.page-footer .container {
+  background-color: black;
+  color: white;
 }
+
 .page-footer ul {
-  grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+  padding-top: 2.5rem;
 }
-.page-footer .container > :last-child {
-  margin-bottom: 0;
+
+.page-footer ul li {
+  margin-bottom: 1.25rem;
+}
+
+.page-footer ul a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.page-footer ul a:before {
+  content: "";
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 1rem;
+  background-repeat: no-repeat;
+  background-size: 1.125rem;
+  background-position: center;
+  background-color: white;
+}
+
+.page-footer ul li:nth-child(1) a:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.25 2.25a8.175 8.175 0 01-2.355 1.148A3.36 3.36 0 009 5.648v.75A7.995 7.995 0 012.25 3s-3 6.75 3.75 9.75a8.73 8.73 0 01-5.25 1.5c6.75 3.75 15 0 15-8.625 0-.209-.02-.417-.06-.622a5.79 5.79 0 001.56-2.753v0z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.page-footer ul li:nth-child(2) a:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.75 14.25C3 15.375 3 12.375 1.5 12M12 16.5v-2.902a2.529 2.529 0 00-.705-1.958c2.355-.262 4.83-1.155 4.83-5.25A4.08 4.08 0 0015 3.578 3.803 3.803 0 0014.932.75S14.047.488 12 1.86a10.035 10.035 0 00-5.25 0C4.702.488 3.817.75 3.817.75a3.803 3.803 0 00-.067 2.828 4.08 4.08 0 00-1.125 2.835c0 4.065 2.475 4.957 4.83 5.25a2.527 2.527 0 00-.705 1.935V16.5' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.page-footer ul li:nth-child(3) a:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8.25A6.75 6.75 0 019.75 15M3 3a12 12 0 0112 12M3.75 15a.75.75 0 100-1.5.75.75 0 000 1.5z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.page-footer ul li:nth-child(4) a:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15h6.75M12.375 2.625a1.591 1.591 0 112.25 2.25L5.25 14.25l-3 .75.75-3 9.375-9.375z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E%0A");
+}
+
+.page-footer ul .link-github svg {
+  display: none;
+}
+
+.page-footer p:nth-child(n+2) {
+  position: relative;
+  border: 1px solid white;
+  padding: 2.5rem 0.5rem;
+  margin-bottom: 3rem;
+}
+.page-footer p:nth-child(n+2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 1.5rem;
+  margin: 0.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.468 8.395l-.002.002-.003.002.005-.004zm9.954-.187a1.238 1.238 0 00-.23-.175 1 1 0 00-1.4.412 5.782 5.782 0 01-1.398 1.777 8.714 8.714 0 00-4.267-9.092 1 1 0 00-1.49.806 7.017 7.017 0 01-2.472 4.942l-.23.188a8.513 8.513 0 00-1.988 1.862 8.983 8.983 0 003.656 13.908 1 1 0 001.327-1.238 6.977 6.977 0 01-.19-2.581 9.004 9.004 0 004.313 4.016c.225.101.48.115.715.038a8.994 8.994 0 003.654-14.863zM14.517 21.04a6.964 6.964 0 01-3.577-4.402 8.93 8.93 0 01-.18-.964 1 1 0 00-1.857-.362 8.959 8.959 0 00-1.205 4.718 6.986 6.986 0 01-1.176-9.869 6.555 6.555 0 011.562-1.458.745.745 0 00.075-.054s.296-.246.306-.251a8.967 8.967 0 002.9-4.633 6.736 6.736 0 011.386 8.088.999.999 0 001.183 1.418 7.856 7.856 0 003.862-2.688 7.002 7.002 0 01-3.279 10.457z' fill='%23C9C9C9'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+}
+
+.page-footer p:last-child {
+  margin-bottom: 4rem;
 }
 
 /*---------------------*/
@@ -877,7 +990,7 @@ li > a:hover {
   padding: 0.5em;
 }
 
-.link-github {
+header .link-github {
   display: flex;
   align-items: center;
   margin-left: -0.5em;
@@ -885,22 +998,18 @@ li > a:hover {
   font-size: clamp(1rem, 3vw, 1.5rem);
   text-decoration: none;
 }
-
-.link-github:after {
+header .link-github:after {
   content: "";
   display: block;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.246704C7.6255 0.246803 5.32849 1.09182 3.51999 2.63055C1.71149 4.16929 0.509528 6.30133 0.12916 8.64519C-0.251207 10.989 0.214845 13.3918 1.44393 15.4235C2.67301 17.4551 4.58491 18.9832 6.83755 19.7342C7.33755 19.8217 7.52505 19.5217 7.52505 19.2592C7.52505 19.0217 7.51254 18.2342 7.51254 17.3967C5.00003 17.8592 4.35003 16.7842 4.15003 16.2217C3.9281 15.6747 3.5763 15.1899 3.12503 14.8092C2.77503 14.6217 2.27503 14.1592 3.11252 14.1467C3.4323 14.1814 3.73901 14.2927 4.00666 14.4711C4.2743 14.6495 4.49499 14.8899 4.65003 15.1717C4.7868 15.4174 4.97071 15.6337 5.19122 15.8082C5.41173 15.9827 5.6645 16.112 5.93506 16.1886C6.20562 16.2652 6.48864 16.2877 6.76791 16.2548C7.04717 16.2219 7.3172 16.1342 7.56251 15.9967C7.6058 15.4883 7.83237 15.013 8.20003 14.6592C5.97503 14.4092 3.65003 13.5467 3.65003 9.72173C3.63597 8.72788 4.00271 7.76631 4.67503 7.03423C4.36931 6.17045 4.40508 5.22252 4.77503 4.38423C4.77503 4.38423 5.6125 4.12172 7.52503 5.40923C9.16131 4.95921 10.8887 4.95921 12.525 5.40923C14.4375 4.10923 15.275 4.38423 15.275 4.38423C15.645 5.22251 15.6808 6.17046 15.375 7.03423C16.0494 7.76506 16.4164 8.72747 16.4 9.72173C16.4 13.5592 14.0625 14.4092 11.8375 14.6592C12.0762 14.9011 12.26 15.1915 12.3764 15.5107C12.4929 15.83 12.5393 16.1705 12.5125 16.5092C12.5125 17.8468 12.5 18.9217 12.5 19.2592C12.5 19.5217 12.6875 19.8342 13.1875 19.7342C15.4362 18.9771 17.3426 17.4455 18.5664 15.4128C19.7903 13.38 20.2519 10.9785 19.8689 8.63694C19.4859 6.29535 18.2832 4.16608 16.4755 2.62922C14.6678 1.09235 12.3727 0.247939 10 0.246704V0.246704Z' fill='black'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-size: 100%;
 }
-
-.link-github span {
+header .link-github span {
   display: grid;
   place-items: center;
 }
-
-.link-github svg,
-.link-github:after {
+header .link-github svg, header .link-github:after {
   width: 24px;
   height: 24px;
   margin: 0.5em;
@@ -1004,11 +1113,11 @@ ul.features li:before {
   left: 0;
   right: 0;
   width: 100%;
-  height: 1rem;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M1 4.41421L29.5858 33H1V4.41421Z' fill='%23EFEFEF' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+  height: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='34' height='34' fill='white'/%3E%3Cpath d='M0.5 3.20711L30.7929 33.5H0.5V3.20711Z' fill='%23EFEFEF' stroke='black'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: top right;
-  transform: translate(2px, -2px);
+  transform: translate(4px, -4px);
 }
 ul.features li:after {
   content: "";
@@ -1032,8 +1141,7 @@ ul.features span:first-child {
 ul.features a {
   flex: 1 0 auto;
   display: flex;
-  align-items: center;
-  padding: 0.75rem;
+  padding: 2.125rem 0.75rem 0.75rem 0.75rem;
   font-size: 1.25rem;
   color: #DD2471;
   text-decoration: none;
