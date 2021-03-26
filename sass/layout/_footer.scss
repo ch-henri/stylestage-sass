@@ -1,3 +1,7 @@
+/*---------------------*/
+/* >>>  Footer.scss  */
+/*---------------------*/
+
 .page-footer p:first-child {
   font-family: $space-mono;
   font-size: clamp(1.25rem, calc(.5rem + 2.5vw), 2.125rem);
@@ -71,21 +75,38 @@
 .page-footer p:nth-child(n + 2) {
   position: relative;
   border: 1px solid white;
-  padding: 2.5rem .5rem;
+  padding: 2.5rem .5rem 1.5rem .5rem;
   margin-bottom: 3rem;
 
-  &:before {
+  &:after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 1.5rem;
     height: 1.5rem;
     margin: .75rem;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.468 8.395l-.002.002-.003.002.005-.004zm9.954-.187a1.238 1.238 0 00-.23-.175 1 1 0 00-1.4.412 5.782 5.782 0 01-1.398 1.777 8.714 8.714 0 00-4.267-9.092 1 1 0 00-1.49.806 7.017 7.017 0 01-2.472 4.942l-.23.188a8.513 8.513 0 00-1.988 1.862 8.983 8.983 0 003.656 13.908 1 1 0 001.327-1.238 6.977 6.977 0 01-.19-2.581 9.004 9.004 0 004.313 4.016c.225.101.48.115.715.038a8.994 8.994 0 003.654-14.863zM14.517 21.04a6.964 6.964 0 01-3.577-4.402 8.93 8.93 0 01-.18-.964 1 1 0 00-1.857-.362 8.959 8.959 0 00-1.205 4.718 6.986 6.986 0 01-1.176-9.869 6.555 6.555 0 011.562-1.458.745.745 0 00.075-.054s.296-.246.306-.251a8.967 8.967 0 002.9-4.633 6.736 6.736 0 011.386 8.088.999.999 0 001.183 1.418 7.856 7.856 0 003.862-2.688 7.002 7.002 0 01-3.279 10.457z' fill='%23C9C9C9'/%3E%3C/svg%3E%0A");
+    background: conic-gradient(from 160.09deg at 58.9% 73.55%, #FFCB14 -1.25deg, #EB1832 189.59deg, #FFCB14 358.75deg, #EB1832 549.59deg);
+    clip-path: path("M15.13 7.13c6 14.74-13 17.31-14.9 8.76C-1.3 8.91 5.29 6.06 6.57 1c1.08-4.21 7 5.68 5.76 8.29 1.06-.54 1.32-2.85 2.8-2.16z");
+    transition: clip-path 1s;
+  }
+
+  &:after:hover {
+    clip-path: path("M15 10.37C26.16 27.35-1.89 26.72.1 19.13 2.38 10.43 4.74 7.91 4.77.86c0-4.35 8.71 9.1 7.43 11.7 1.06-.56 1.32-2.88 2.8-2.19z");
+
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h24L0 24V0z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.707.707l-24 24L0 24 24 0l.707.707z' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top right;
+    background-position: top left;
   }
 }
 

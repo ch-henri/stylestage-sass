@@ -82,29 +82,7 @@ a {
   color: var(--color-anchor);
 }
 
-blockquote {
-  margin: 0;
-}
 
-blockquote p {
-  font-size: 1.125rem;
-  font-weight: 520;
-  line-height: 1.7;
-  color: #493754;
-}
-
-
-blockquote strong {
-  display: block;
-  width: 1em; // to make a line-break in white-space
-  margin-bottom: .5em;
-  font-family: $space-mono;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  color: $color-secondary;
-}
 
 #about {
   ul {

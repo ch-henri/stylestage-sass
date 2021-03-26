@@ -11,12 +11,12 @@ header {
 header:before {
   content: "";
   position: absolute;
-  top: calc(-1 * clamp(1.75rem, 8vw, 4rem)); /* invert value out of clamp() because it works only with positive value */
+  top: calc(-1 * clamp(1.75rem, 8vw, 4rem));
   left: 0;
   width: clamp(32px, 7vw, 60px);
   height: clamp(32px, 7vw, 60px);
   background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg width='58' height='58' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_i)'%3E%3Cpath d='M58 -1.0141e-05L0 0L1.0141e-05 58L29 58L29 28.0175L58 28.0175L58 -1.0141e-05Z' fill='%23FDFAFF'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_i' x='0' y='0' width='58' height='62' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='58' height='58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23a)'%3E%3Cpath d='M29 29h29V0H0v58h29V29z' fill='%23FDFAFF'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' x='0' y='0' width='58' height='62' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend in2='shape' result='effect1_innerShadow'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   transform: translateY(-50%);
 }
@@ -27,7 +27,7 @@ header:after {
   content: "";
   display: block;
   background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg width='293' height='584' viewBox='0 0 293 584' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 292C2 452.715 129.8 583 293 583V1C129.8 1 2 131.285 2 292Z' fill='white'/%3E%3Cpath d='M293 494.414C180.741 494.414 89.7365 403.566 89.7365 291.5C89.7365 179.434 180.741 88.5857 293 88.5857' fill='url(%23paint0_linear)'/%3E%3Cpath d='M66.3767 291.5C66.3767 166.559 167.844 65.266 293 65.266' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 517.734C167.844 517.734 66.3767 416.441 66.3767 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cpath d='M45.4515 291.5C45.4515 155.019 156.285 44.3768 293 44.3768' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 538.623C156.285 538.623 45.4515 427.98 45.4515 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cpath d='M24.6143 291.5C24.6143 143.524 144.769 23.5752 293 23.5752' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 559.425C144.769 559.425 24.6143 439.476 24.6143 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cpath d='M2 291.5C2 131.065 132.289 1 293 1' stroke='%231D262D' stroke-miterlimit='10'/%3E%3Cpath d='M293 582C132.289 582 2 451.935 2 291.5' stroke='%231D262D' stroke-width='4' stroke-miterlimit='10'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='116.402' y1='83.8627' x2='331.124' y2='287.48' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='0.428054' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='293' height='584' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 292c0 160.715 127.8 291 291 291V1C129.8 1 2 131.285 2 292z' fill='%23fff'/%3E%3Cpath d='M293 494.414c-112.259 0-203.263-90.848-203.263-202.914C89.737 179.434 180.74 88.586 293 88.586' fill='url(%23a)'/%3E%3Cpath d='M66.377 291.5C66.377 166.559 167.844 65.266 293 65.266' class='b'/%3E%3Cpath d='M293 517.734c-125.156 0-226.623-101.293-226.623-226.234' class='b c'/%3E%3Cpath d='M45.452 291.5C45.452 155.019 156.285 44.377 293 44.377' class='b'/%3E%3Cpath d='M293 538.623c-136.715 0-247.548-110.643-247.548-247.123' class='b c'/%3E%3Cpath d='M24.614 291.5C24.614 143.524 144.77 23.575 293 23.575' class='b'/%3E%3Cpath d='M293 559.425c-148.231 0-268.386-119.949-268.386-267.925' class='b c'/%3E%3Cpath d='M2 291.5C2 131.065 132.289 1 293 1' class='b'/%3E%3Cpath d='M293 582C132.289 582 2 451.935 2 291.5' class='b c'/%3E%3Cdefs%3E%3ClinearGradient id='a' x1='116.402' y1='83.863' x2='331.124' y2='287.48' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FB9A9A'/%3E%3Cstop offset='.428' stop-color='%23FDA7FF'/%3E%3Cstop offset='1' stop-color='%23C9C0FF'/%3E%3C/linearGradient%3E%3Cstyle%3E.b%7Bstroke:%231d262d;stroke-miterlimit:10%7D.c%7Bstroke-width:4%7D%3C/style%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: right top;
   transform: translateY(-15%);
@@ -46,7 +46,7 @@ header .container {
   grid-column: 1;
   }
 }
- 
+
 header h1,
 header h2 {
 max-width: 600px;
