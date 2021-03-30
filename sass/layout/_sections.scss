@@ -239,6 +239,7 @@ main section,
   .link-guidelines {
     grid-column: 2 / 14;
     justify-self: start;
+    margin-top: 2rem;
 
     @media (min-width: 576px) {
       & { grid-column: 5 / 14; }
