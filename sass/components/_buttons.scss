@@ -3,7 +3,8 @@
 /*---------------------*/
 
 p  a:not([class^="link-"]),
-li a:not([class^="link-"]) {
+ul:not(.features) li a:not([class^="link-"]),
+ol li a {
   text-decoration: none;
   color: $text-link-color;
   @include gradient-primary(.5);
@@ -45,6 +46,7 @@ header .link-github {
   font-family: $space-mono;
   font-size: clamp(1rem, 3vw, 1.5rem);
   text-decoration: none;
+  border: 2px solid transparent;
 
   &:after {
     content: "";
@@ -54,12 +56,29 @@ header .link-github {
     background-size: 100%;
   }
 
+  &:hover {
+   border-bottom-color: black;
+   border-right-color: black;
+   border-top-color: white;
+   border-left-color: white;
+  }
+  &:active {
+    border-bottom-color: white;
+    border-right-color: white;
+    border-top-color: black;
+    border-left-color: black;
+   }
+
   & span {
     display: grid;
     place-items: center;
   }
 
-  & svg,
+  & svg {
+    width: 20px;
+    height: 20px;
+    margin: .5em;
+  }
   &:after {
     width: 24px;
     height: 24px;
@@ -71,7 +90,8 @@ header .link-github {
 .link-guidelines,
 .link-downloadcss,
 .link-downloadhtml,
-.link-allstyles {
+.link-allstyles,
+#profile-title ~ a {
   position: relative;
   padding: .675em .875em;
   color: $color-primary;
@@ -119,7 +139,7 @@ header .link-github {
   width: 100%;
   color: transparent;
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
-  @include gradient-primary(1);
+  @include gradient-primary(.5);
  // background: linear-gradient(91.36deg, #FFC9C9 0%, #F0CFFF 100%);
   background-clip: content-box;
 
@@ -162,10 +182,26 @@ header .link-github {
 .page-footer ul a {
   text-decoration: none;
   letter-spacing: .09em;
+  line-height: 1.5;
 
   &:hover {
-    background:grey;
     color: $color-primary;
+  }
+
+  &:after {
+    content: "↗";
+    display: block;
+    width: 1em;
+    height: 1em;
+    align-self: baseline;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-left: .2em;
+    font-weight: 600;
+    opacity: 0;
+  }
+  &:hover:after {
+    opacity: 1;
   }
 }
 

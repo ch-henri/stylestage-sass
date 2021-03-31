@@ -36,3 +36,21 @@ aside {
 footer {
   grid-column: 1 / 15;
 }
+
+
+
+main:focus {
+  outline: none;
+}
+
+aside:first-of-type {
+  background-color: var(--color-gray-500);
+  margin-right: -4rem;
+  padding-right: 4rem;
+}
+
+@media (min-width: 576px) {
+  aside:first-of-type {
+    margin-top: 3rem;
+  }
+}

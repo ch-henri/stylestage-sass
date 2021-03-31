@@ -1,6 +1,6 @@
 nav {
   padding: clamp(1rem, 3vw,  3.5rem) clamp(0px, 1vw,  2rem); // 0px should be unitless but somehow without unit it is not valid
-  background: #F6F6F6;
+  background-color: var(--color-gray-500);
 }
 
 nav ul {

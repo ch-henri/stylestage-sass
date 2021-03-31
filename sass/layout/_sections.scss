@@ -80,9 +80,13 @@ main section,
     grid-column: 2 / 7;
     align-self: center;
     margin-bottom: 1.25em;
+    margin-top: 1.25em;
   }
   @media (min-width: 576px) {
-    h2 { grid-column: 3 / 7; }
+    h2 {
+        grid-column: 3 / 7;
+        margin-top: 0;
+    }
   }
   @media (min-width: 992px) {
     h2 { grid-column: 3 / 6; }
@@ -344,11 +348,49 @@ main section,
   margin: 1rem 0;
  }
 }
+//------------
+/*
+   #profile */
+//------------
 
+.profile .container {
+  display: grid;
+  grid-template-columns:  minmax(10px, 1fr) repeat(12, minmax(0, 80px));
+  column-gap: 1rem;
+}
 
+#profile-title {
+  grid-column: 2 / 10;
+  @media (min-width: 576px) {
+    & { grid-column: 3 / 7; }
+  }
+  @media (min-width: 992px) {
+    & { grid-column: 3 / 6; }
+  }
+}
+
+#profile-title ~ ul {
+  grid-column: 2 / 14;
+  @media (min-width: 576px) {
+    & { grid-column: 4 / 10; }
+  }
+  @media (min-width: 992px) {
+    & { grid-column: 7 / 11; }
+  }
+}
+
+#profile-title ~ a {
+  grid-column: 2 / 14;
+  @media (min-width: 576px) {
+    & { grid-column: 10 / 14; }
+  }
+  @media (min-width: 992px) {
+    & { grid-column: 11 / 14; }
+  }
+}
 
 //------------
-/* Section 4
+/* Section 5
    #styles */
 //------------
 
@@ -377,7 +419,9 @@ main section,
   ul {
     grid-column: 2 / 14;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -.5rem;
   }
 
   @media (min-width: 576px) {
@@ -389,22 +433,36 @@ main section,
   }
 
   ul li {
-    flex: 0 1 30%;
-    max-width: 200px;
-    margin-bottom: 3rem;
+    flex: 1 1 30%;
+    max-width: 12.5rem;
+    min-width: 8.75rem;
+    height: 14.375rem;
+    margin: 1rem .5rem 3rem .5rem;
   }
 
   .link-allstyles {
-    grid-column: 7 / 14;
-    justify-self: start;
+    grid-column: 1 / 14;
+    justify-self: center;
     margin-top: 3.5rem;
   }
+  @media (min-width: 576px) {
+    .link-allstyles  {
+      grid-column: 4 / 14;
+      justify-self: left;
+    }
+  }
+  @media (min-width: 992px) {
+    .link-allstyles  {
+      grid-column: 7 / 14;
+    }
+  }
+
 }
 
 
 
 //------------
-/* Section 4
+/*
    #page-footer */
 //------------
 
