@@ -121,7 +121,7 @@ a {
   }
 
   ol li::marker {
-    color: red;
+    color: var(--color-secondary);
     font-size: 1.25rem;
     vertical-align: bottom;
   }
