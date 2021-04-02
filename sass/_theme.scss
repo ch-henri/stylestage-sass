@@ -30,6 +30,7 @@ $font-sizes: (
 // Colors //
 //
 $color-primary: #DD2471;
+$color-primary-dark: #CA1862;
 $color-secondary: #A132E5;
 $text-link-color: $color-primary;
 $gray-500: #f6f6f6;
@@ -42,6 +43,7 @@ $black: #000;
 
 $colors: (
     "primary": $color-primary,
+    "primary-dark": $color-primary-dark,
     "secondary": $color-secondary,
     "text-link-color": $text-link-color,
     "gray-500": $gray-500,

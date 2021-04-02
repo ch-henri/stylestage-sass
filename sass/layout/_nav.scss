@@ -30,9 +30,9 @@ nav li {
   }
 }
 
-nav li a:not([class^="link-"]) {
+nav li a {
   padding: 0.5rem 1rem;
-  color: black;
+  color: var(--color-primary-dark) !important;
   letter-spacing: -.01em;
   font-weight: 500;
 }

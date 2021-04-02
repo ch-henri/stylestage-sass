@@ -114,6 +114,7 @@ main section,
   @media (min-width: 992px) {
     blockquote { grid-column: 6 / 14; }
   }
+  a { color: var(--color-primary-dark) !important;}
 }
 
 //------------
